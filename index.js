@@ -127,16 +127,18 @@ function myMap(array, callback) {
 }
 
 // ***** Callbacks - Question 1 *****
-
+function triple(n) {
+  return n*3
+}
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+console.log("%cCallbacks - Question 1", "color: red")
 
-// console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
-//
-// console.log(myMap([2,4,6,8], triple))   
-// // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log(myMap([1,2,3,4,5], triple)) 
+// => [3,6,9,12,15]
+
+console.log(myMap([2,4,6,8], triple))   
+// => [6,12,18,24]
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
