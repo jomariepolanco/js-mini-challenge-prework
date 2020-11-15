@@ -142,13 +142,16 @@ console.log("%c----------", "color: red")
 
 
 // ***** Callbacks - Question 2 *****
-
+function greet(name) {
+  return `Hi, ${name}!`
+  
+}
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 2", "color: red")
+console.log("%cCallbacks - Question 2", "color: red")
 
-// console.log(myMap(["Ian", "Chase"], greet)) 
-// // => ["Hi, Ian!", "Hi, Chase!"]
-// console.log("%c----------", "color: red") 
+console.log(myMap(["Ian", "Chase"], greet)) 
+// => ["Hi, Ian!", "Hi, Chase!"]
+console.log("%c----------", "color: red") 
 
 
 
