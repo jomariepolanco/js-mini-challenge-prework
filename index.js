@@ -89,8 +89,8 @@ console.log("%c----------", "color: red")
 function printNameAndPhones(users) {
   for (user in users) {
     console.log(users[user]['name']);
-    console.log(`Cell: ${users[user]['phones']['cell']}`)
-    console.log(`Office: ${users[user]['phones']['office']}`)
+    console.log(`Cell: ${users[user]['phones']['cell']}`);
+    console.log(`Office: ${users[user]['phones']['office']}`);
   }
 }
 // *** Uncomment the lines below to test
@@ -128,7 +128,7 @@ function myMap(array, callback) {
 
 // ***** Callbacks - Question 1 *****
 function triple(n) {
-  return n*3
+  return n*3;
 }
 // *** Uncomment the lines below to test
 console.log("%cCallbacks - Question 1", "color: red")
@@ -143,7 +143,7 @@ console.log("%c----------", "color: red")
 
 // ***** Callbacks - Question 2 *****
 function greet(name) {
-  return `Hi, ${name}!`
+  return `Hi, ${name}!`;
   
 }
 // *** Uncomment the lines below to test
@@ -173,26 +173,31 @@ function nowServing(line) {
 const line = []
 
 // ***** Scope & Closures - Question 1 *****
-
+let ticketNumber = 1;
+function takeATicketNumber(line) {
+  line.push(ticketNumber);
+  console.log(`Welcome. You are ticket number ${ticketNumber}`);
+  ticketNumber += 1
+}
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
-// console.log("%c----------", "color: red") 
+console.log(nowServing(line))
+// => `Currently serving 2.`
+console.log("%c----------", "color: red") 
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
 
 
 // ***** Scope & Closures - Question 2 *****
