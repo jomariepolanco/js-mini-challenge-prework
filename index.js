@@ -45,11 +45,11 @@ console.log("%c----------", "color: red")
 // ***** Question 4 *****
 function sameSameButDifferent(num, maybeNum) {
   if (num === maybeNum) {
-    return "same same"
+    return "same same";
   } else if (num == maybeNum) {
-    return "same same (but different)"
+    return "same same (but different)";
   } else {
-    return "different"
+    return "different";
   }
 }
 // *** Uncomment the lines below to test
@@ -71,15 +71,17 @@ console.log("%c----------", "color: red")
 
 
 // ***** Question 5 *****
-
+function updateGrade(student, grade) {
+  student['grade'] = grade 
+}
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
+console.log("%cQuestion 5", "color: red")
 
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)  
-// // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red") 
+const student1 = { name: "Duane", grade: 88 }
+updateGrade(student1, 92)
+console.log(student1)  
+// => { name: "Duane", grade: 92 }
+console.log("%c----------", "color: red") 
 
 
 
