@@ -10,17 +10,17 @@ console.log("%c----------", "color: red")
 
 
 // ***** Question 2 *****
-
+const name = "Jo"
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
+console.log("%cQuestion 2", "color: red") 
 
-// console.log(name)
-// // => "Ian"
+console.log(name)
+// => "Ian"
 // name = "Not Ian" 
-// // => TypeError
-// console.log("%c----------", "color: red") 
+// => TypeError
+console.log("%c----------", "color: red") 
 
 
 
