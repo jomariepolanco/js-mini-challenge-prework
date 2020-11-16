@@ -1,6 +1,7 @@
 // ***** Question 1 *****
 let counter = 1
 counter = 2
+// counter = counter + 1
 // *** Uncomment the lines below to test
 console.log("%cQuestion 1", "color: red") 
 
@@ -73,6 +74,8 @@ console.log("%c----------", "color: red")
 // ***** Question 5 *****
 function updateGrade(student, grade) {
   student['grade'] = grade 
+  //student.grade = grade preference is to use dot notation
+  //only time to need to use brackets is when key has special characters in it
 }
 // *** Uncomment the lines below to test
 console.log("%cQuestion 5", "color: red")
@@ -83,15 +86,23 @@ console.log(student1)
 // => { name: "Duane", grade: 92 }
 console.log("%c----------", "color: red") 
 
-
-
 // ***** Question 6 *****
 function printNameAndPhones(users) {
-  for (user in users) {
-    console.log(users[user]['name']);
-    console.log(`Cell: ${users[user]['phones']['cell']}`);
-    console.log(`Office: ${users[user]['phones']['office']}`);
+  //should be for..of because its an ARRAY of hashes
+  for (let user of users) {
+    console.log(user.name)
+    console.log(`Cell: ${user.phones.cell}`)
+    console.log(`Office: ${user.phones.office}`)
   }
+
+  //could also be forEach
+
+
+  // for (user in users) {
+  //   console.log(users[user]['name']);
+  //   console.log(`Cell: ${users[user]['phones']['cell']}`);
+  //   console.log(`Office: ${users[user]['phones']['office']}`);
+  // }
 }
 // *** Uncomment the lines below to test
 console.log("%cQuestion 6", "color: red")
@@ -178,6 +189,7 @@ function takeATicketNumber(line) {
   line.push(ticketNumber);
   console.log(`Welcome. You are ticket number ${ticketNumber}`);
   ticketNumber += 1
+  //ticketNumber++
 }
 
 // *** Uncomment the lines below to test
@@ -202,7 +214,14 @@ console.log(takeATicketNumber(line))
 
 // ***** Scope & Closures - Question 2 *****
 function ticketNumberGeneratorFunc() {
-  return takeATicketNumber
+  let ticket = 0 
+
+  function takeANumber(line) {
+    line.push(ticketNumber)
+    console.log(`Welcome. You are ticket number ${ticketNumber}`)
+    ticket++
+  }
+  return takeANumber
 }
 
 // *** Uncomment the lines below to test
